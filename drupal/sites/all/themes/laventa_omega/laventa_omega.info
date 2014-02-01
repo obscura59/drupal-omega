@@ -1,0 +1,32 @@
+name = LaVenta Omega
+description = Test per un sito basato su Omega.
+base theme = omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = css/laventa-omega.normalize.css
+stylesheets[all][] = css/laventa-omega.hacks.css
+stylesheets[all][] = css/laventa-omega.styles.css
+stylesheets[all][] = css/laventa-omega.no-query.css
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = js/laventa-omega.behaviors.js
+scripts[] = js/grid.js
+; ========================================
+; Regions
+; ========================================
+regions[branding] = Branding
+regions[header] = Header
+regions[navigation] = Navigation
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[footer] = Footer

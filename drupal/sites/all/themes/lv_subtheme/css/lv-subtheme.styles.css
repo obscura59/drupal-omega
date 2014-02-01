@@ -1,0 +1,13 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/lv_subtheme\/sass\/base\/_forms\.scss}line{font-family:\000031}}
+input {
+  border: solid 2px #666; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/lv_subtheme\/sass\/base\/_media\.scss}line{font-family:\000031}}
+img, media {
+  max-width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/lv_subtheme\/sass\/lv-subtheme\.styles\.scss}line{font-family:\0000324}}
+a {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: green; }

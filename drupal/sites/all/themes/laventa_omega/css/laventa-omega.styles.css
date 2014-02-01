@@ -1,0 +1,44 @@
+/* No files to import found in abstractions/**\/* */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/laventa_omega\/sass\/base\/_media\.scss}line{font-family:\000031}}
+img, media {
+  max-width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/laventa_omega\/sass\/laventa-omega\.styles\.scss}line{font-family:\0000325}}
+body {
+  background: yellow; }
+
+@media (min-width: 20em) and (max-width: 35em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/laventa_omega\/sass\/laventa-omega\.styles\.scss}line{font-family:\0000330}}
+  body {
+    background: purple; } }
+@media (min-width: 44em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/laventa_omega\/sass\/laventa-omega\.styles\.scss}line{font-family:\0000336}}
+  body {
+    background: blue; } }
+@media (min-width: 70em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/laventa_omega\/sass\/laventa-omega\.styles\.scss}line{font-family:\0000342}}
+  body {
+    background: green; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/laventa_omega\/sass\/laventa-omega\.styles\.scss}line{font-family:\0000348}}
+.l-page {
+  margin: 0 auto; }
+  @media (min-width: 70em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/laventa_omega\/sass\/laventa-omega\.styles\.scss}line{font-family:\0000352}}
+    .l-page p {
+      font-size: 1.8em; } }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/laventa_omega\/sass\/laventa-omega\.styles\.scss}line{font-family:\0000359}}
+.l-region--sidebar-first {
+  width: 23.72881%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/alvise\/Dropbox\/quick-drupal-20140121110324\/drupal\/sites\/all\/themes\/laventa_omega\/sass\/laventa-omega\.styles\.scss}line{font-family:\0000363}}
+.l-content {
+  width: 74.57627%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none; }
