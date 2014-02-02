@@ -3,7 +3,7 @@ APACHE
 Programmi: apache2 apache2-mpm-prefork
 Moduli: vhost_alias rewrite
 Configurazione di /etc/apache2/apache2.conf,
-# Below configuration added by Drubuntu.
+
 #
 # This file configures Apache so it provides access and .htaccess overrides
 # to projects in your workspace and enables virtual hosting.
