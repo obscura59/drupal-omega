@@ -1,0 +1,57 @@
+Configurazioni necessarie per creare un ambiente di sviluppo Drupal in Ubuntu.
+APACHE
+Programmi: apache2 apache2-mpm-prefork
+Moduli: vhost_alias rewrite
+Configurazione di /etc/apache2/apache2.conf,
+# Below configuration added by Drubuntu.
+#
+# This file configures Apache so it provides access and .htaccess overrides
+# to projects in your workspace and enables virtual hosting.
+
+<Directory /YOUR_HOME_DIRECTORY/directory_di_lavoro>
+    Options FollowSymLinks
+    AllowOverride All
+
+    Order allow,deny
+    Allow from all
+</Directory>
+
+ServerName $hostname
+
+/etc/apache2/sites-available/drubuntu
+
+# This file configures Apache so that when you browse to
+# http://PLATFORM.' . $hostname . '/ or http://SITE.PLATFORM.' . $hostname . '/ 
+# Apache will use the docroot ' . $workspace .'/PLATFORM/.
+
+<VirtualHost *:80>
+    ServerName ' . $hostname . '
+    ServerAlias *.' . $hostname . '
+
+    # Use VirtualDocumentRoot to serve static files from the correct location.
+    # "%-2" means that we ignore the last segment of the hostname - i.e.
+    # mysite.myplatform.localhost is mapped to the mysite.myplatform docroot.
+    VirtualDocumentRoot ' . $workspace .'/%-2
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+
+        # We set the workspace location centrally here to avoid duplication.
+        RewriteRule ^.*$ - [E=workspace:' . $workspace .']
+        
+        # Ensure the hostname is lower case.
+        RewriteMap lowercase int:tolower
+
+        # These rewrite rules detect a Drupal installation and add rewrite
+        # rules for clean URLs for dynamic vhosts (since the default .htaccess
+        # does not work for dynamic vhosts).
+        # We use a passthrough (PT) rewrite to work around an Apache issue with
+        # SCRIPT_NAME - https://issues.apache.org/bugzilla/show_bug.cgi?id=40102.
+        RewriteCond %{HTTP_HOST} ^([^.]*\.)?([^.]+)\.' . $hostname . '
+        RewriteCond %{ENV:workspace}/%2/modules/system/system.module -f
+        RewriteCond %{ENV:workspace}/%2%{REQUEST_FILENAME} !-f
+        RewriteCond %{ENV:workspace}/%2%{REQUEST_FILENAME} !-d
+        RewriteRule ^(.*)$ /index.php?q=$1 [QSA,L,PT]
+    </IfModule>
+</VirtualHost>
+// User configuration.
+    drush_drubuntu_exec('Symlinking the Apache log directory to workspace for easy reference.', 'ln -sfT /var/log/apache2 ' . $_SERVER['HOME'] . '/'. drush_get_option('workspace', 'workspace') .'/logs', array(), 'Apache log directory symlinked to workspace successfully.', 
